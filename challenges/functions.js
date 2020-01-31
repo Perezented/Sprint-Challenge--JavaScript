@@ -34,17 +34,20 @@ function greeting(fName, lName) {
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation:
+// Explanation: Only the function within its scope can access that information. if a funciton is within that scope, they can access it too. An external function cannot access the internal functions code though.
 
-const external = "I'm outside the function";
+const external = "I'm outside the function"; //in the global scope, everything can call on it.
 
 function myFunction() {
     console.log(external);
-    const internal = "Hello! I'm inside myFunction!";
-
+    const internal = "Hello! I'm inside myFunction!"; //myFunciton scope
+    //myFunciton scope, cannot reach inside other functions.
     function nestedFunction() {
-        console.log(internal);
+        console.log(internal); //nestedFunction scope, and myFunction scope accessable
     }
+
+    //myFunction scope
     nestedFunction();
-}
+} //myFunction scope
+
 myFunction();
