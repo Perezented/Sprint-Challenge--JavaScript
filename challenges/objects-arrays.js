@@ -66,6 +66,26 @@ console.log(dino1.roar());
 
 // Given an array of college graduates.  Complete the following requests using any array method you like
 
+// ==== Objects ====
+
+/* 
+  Given the following information about dinosaurs, create 3 objects: 
+  Use this pattern to create your objects: 
+  object name, diet, weight, length, period
+*/
+
+// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
+
+// stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+
+// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
+
+// Using your dinosaur objects, log answers to these questions:
+
+// ==== Arrays ====
+
+// Given an array of college graduates.  Complete the following requests using any array method you like
+
 const graduates = [
     {
         id: 1,
@@ -134,6 +154,14 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+function pullAndSort(array) {
+    for (i = 0; i < array.length; i++) {
+        universities.push(array[i].university);
+    }
+    universities.sort();
+}
+
+pullAndSort(graduates);
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -143,10 +171,25 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
+function nameEmail(array) {
+    for (i = 0; i < array.length; i++) {
+        contactInfo.push(`${array[i].first_name} ${array[i].email}`);
+    }
+}
+nameEmail(graduates);
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+// function filterEm(array)for (i = 0; i < array.length; i++) {
+//   if
+//   }
+// function filterItems(array, query) {
+//   unisWithUni.push(array.filter)
+// }
+
+// filterItems(graduates, 'Uni')
+
 console.log(unisWithUni);
 
 // ==== ADVANCED Array Methods ====
