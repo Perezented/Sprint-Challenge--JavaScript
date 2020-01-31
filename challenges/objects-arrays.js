@@ -15,36 +15,36 @@
 // Using your dinosaur objects, log answers to these questions:
 
 function dino(name, diet, weight, length, period) {
-    (this.name = name),
-        (this.diet = diet),
-        (this.weight = weight),
-        (this.length = length),
-        (this.period = period);
+  (this.name = name),
+    (this.diet = diet),
+    (this.weight = weight),
+    (this.length = length),
+    (this.period = period);
 }
 const dino1 = new dino(
-    "tyrannosaurus",
-    "carnivorous",
-    "7000kg",
-    "12m",
-    "Late Cretaceous"
+  "tyrannosaurus",
+  "carnivorous",
+  "7000kg",
+  "12m",
+  "Late Cretaceous"
 );
 const dino2 = new dino(
-    "velociraptor",
-    "carnivorous",
-    "15kg",
-    "1.8m",
-    "Late Cretaceous"
+  "velociraptor",
+  "carnivorous",
+  "15kg",
+  "1.8m",
+  "Late Cretaceous"
 );
 const dino3 = new dino(
-    "stegosaurus",
-    "herbivorous",
-    "2000kg",
-    "9m",
-    "Late Jurassic"
+  "stegosaurus",
+  "herbivorous",
+  "2000kg",
+  "9m",
+  "Late Jurassic"
 );
 
-dino.prototype.roar = function() {
-    return "RAWERSRARARWERSARARARRRR!";
+dino.prototype.roar = function () {
+  return "RAWERSRARARWERSARARARRRR!";
 };
 
 // How much did tyrannosaurus weigh?
@@ -87,67 +87,67 @@ console.log(dino1.roar());
 // Given an array of college graduates.  Complete the following requests using any array method you like
 
 const graduates = [
-    {
-        id: 1,
-        first_name: "Cynde",
-        university: "Missouri Southern State College",
-        email: "ctorry0@macromedia.com"
-    },
-    {
-        id: 2,
-        first_name: "Saundra",
-        university: "The School of the Art Institute of Chicago",
-        email: "swhal1@state.gov"
-    },
-    {
-        id: 3,
-        first_name: "Lambert",
-        university: "Marian College",
-        email: "lparham2@techcrunch.com"
-    },
-    {
-        id: 4,
-        first_name: "Modestine",
-        university: "International Medical & Technological University",
-        email: "mdolder3@symantec.com"
-    },
-    {
-        id: 5,
-        first_name: "Chick",
-        university: "Sultan Salahuddin Abdul Aziz Shah Polytechnic",
-        email: "camorts4@google.com.au"
-    },
-    {
-        id: 6,
-        first_name: "Jakob",
-        university:
-            "Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft",
-        email: "jharken5@spiegel.de"
-    },
-    {
-        id: 7,
-        first_name: "Robbi",
-        university: "Salem University",
-        email: "rbrister6@redcross.org"
-    },
-    {
-        id: 8,
-        first_name: "Colline",
-        university: "Coastal Carolina University",
-        email: "cbrosh7@alibaba.com"
-    },
-    {
-        id: 9,
-        first_name: "Michail",
-        university: "Universidad Católica de Ávila",
-        email: "mrome8@shinystat.com"
-    },
-    {
-        id: 10,
-        first_name: "Hube",
-        university: "Universitat Rovira I Virgili Tarragona",
-        email: "hlethbrig9@foxnews.com"
-    }
+  {
+    id: 1,
+    first_name: "Cynde",
+    university: "Missouri Southern State College",
+    email: "ctorry0@macromedia.com"
+  },
+  {
+    id: 2,
+    first_name: "Saundra",
+    university: "The School of the Art Institute of Chicago",
+    email: "swhal1@state.gov"
+  },
+  {
+    id: 3,
+    first_name: "Lambert",
+    university: "Marian College",
+    email: "lparham2@techcrunch.com"
+  },
+  {
+    id: 4,
+    first_name: "Modestine",
+    university: "International Medical & Technological University",
+    email: "mdolder3@symantec.com"
+  },
+  {
+    id: 5,
+    first_name: "Chick",
+    university: "Sultan Salahuddin Abdul Aziz Shah Polytechnic",
+    email: "camorts4@google.com.au"
+  },
+  {
+    id: 6,
+    first_name: "Jakob",
+    university:
+      "Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft",
+    email: "jharken5@spiegel.de"
+  },
+  {
+    id: 7,
+    first_name: "Robbi",
+    university: "Salem University",
+    email: "rbrister6@redcross.org"
+  },
+  {
+    id: 8,
+    first_name: "Colline",
+    university: "Coastal Carolina University",
+    email: "cbrosh7@alibaba.com"
+  },
+  {
+    id: 9,
+    first_name: "Michail",
+    university: "Universidad Católica de Ávila",
+    email: "mrome8@shinystat.com"
+  },
+  {
+    id: 10,
+    first_name: "Hube",
+    university: "Universitat Rovira I Virgili Tarragona",
+    email: "hlethbrig9@foxnews.com"
+  }
 ];
 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
@@ -155,10 +155,10 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 function pullAndSort(array) {
-    for (i = 0; i < array.length; i++) {
-        universities.push(array[i].university);
-    }
-    universities.sort();
+  for (i = 0; i < array.length; i++) {
+    universities.push(array[i].university);
+  }
+  universities.sort();
 }
 
 pullAndSort(graduates);
@@ -172,9 +172,9 @@ The resulting contact information strings should have a space between the first 
 Log the result of your new array. */
 const contactInfo = [];
 function nameEmail(array) {
-    for (i = 0; i < array.length; i++) {
-        contactInfo.push(`${array[i].first_name} ${array[i].email}`);
-    }
+  for (i = 0; i < array.length; i++) {
+    contactInfo.push(`${array[i].first_name} ${array[i].email}`);
+  }
 }
 nameEmail(graduates);
 console.log(contactInfo);
@@ -183,11 +183,11 @@ console.log(contactInfo);
 const unisWithUni = [];
 // const filler2 = [];
 function check4Uni(array) {
-    for (i = 0; i < array.length; i++) {
-        if (array[i].university.includes("Uni") == true) {
-            unisWithUni.push(array[i]);
-        }
+  for (i = 0; i < array.length; i++) {
+    if (array[i].university.includes("Uni") == true) {
+      unisWithUni.push(array[i]);
     }
+  }
 }
 // function pullUnis(array) {
 //     for (i = 0; i < array.length; i++) {
@@ -215,66 +215,66 @@ console.log(unisWithUni);
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
 const zooAnimals = [
-    {
-        animal_name: "Jackal, asiatic",
-        population: 5,
-        scientific_name: "Canis aureus",
-        state: "Kentucky"
-    },
-    {
-        animal_name: "Screamer, southern",
-        population: 1,
-        scientific_name: "Chauna torquata",
-        state: "Alabama"
-    },
-    {
-        animal_name: "White spoonbill",
-        population: 8,
-        scientific_name: "Platalea leucordia",
-        state: "Georgia"
-    },
-    {
-        animal_name: "White-cheeked pintail",
-        population: 1,
-        scientific_name: "Anas bahamensis",
-        state: "Oregon"
-    },
-    {
-        animal_name: "Black-backed jackal",
-        population: 2,
-        scientific_name: "Canis mesomelas",
-        state: "Washington"
-    },
-    {
-        animal_name: "Brolga crane",
-        population: 9,
-        scientific_name: "Grus rubicundus",
-        state: "New Mexico"
-    },
-    {
-        animal_name: "Common melba finch",
-        population: 5,
-        scientific_name: "Pytilia melba",
-        state: "Pennsylvania"
-    },
-    {
-        animal_name: "Pampa gray fox",
-        population: 10,
-        scientific_name: "Pseudalopex gymnocercus",
-        state: "Connecticut"
-    },
-    {
-        animal_name: "Hawk-eagle, crowned",
-        population: 10,
-        scientific_name: "Spizaetus coronatus",
-        state: "Florida"
-    },
-    {
-        animal_name: "Australian pelican",
-        population: 5,
-        scientific_name: "Pelecanus conspicillatus",
-        state: "West Virginia"
-    }
+  {
+    animal_name: "Jackal, asiatic",
+    population: 5,
+    scientific_name: "Canis aureus",
+    state: "Kentucky"
+  },
+  {
+    animal_name: "Screamer, southern",
+    population: 1,
+    scientific_name: "Chauna torquata",
+    state: "Alabama"
+  },
+  {
+    animal_name: "White spoonbill",
+    population: 8,
+    scientific_name: "Platalea leucordia",
+    state: "Georgia"
+  },
+  {
+    animal_name: "White-cheeked pintail",
+    population: 1,
+    scientific_name: "Anas bahamensis",
+    state: "Oregon"
+  },
+  {
+    animal_name: "Black-backed jackal",
+    population: 2,
+    scientific_name: "Canis mesomelas",
+    state: "Washington"
+  },
+  {
+    animal_name: "Brolga crane",
+    population: 9,
+    scientific_name: "Grus rubicundus",
+    state: "New Mexico"
+  },
+  {
+    animal_name: "Common melba finch",
+    population: 5,
+    scientific_name: "Pytilia melba",
+    state: "Pennsylvania"
+  },
+  {
+    animal_name: "Pampa gray fox",
+    population: 10,
+    scientific_name: "Pseudalopex gymnocercus",
+    state: "Connecticut"
+  },
+  {
+    animal_name: "Hawk-eagle, crowned",
+    population: 10,
+    scientific_name: "Spizaetus coronatus",
+    state: "Florida"
+  },
+  {
+    animal_name: "Australian pelican",
+    population: 5,
+    scientific_name: "Pelecanus conspicillatus",
+    state: "West Virginia"
+  }
 ];
 
 /* Request 1: .forEach()
@@ -283,9 +283,9 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(function(array) {
-    displayNames.push(array.animal_name);
-    displayNames.push(array.scientific_name);
+zooAnimals.forEach(function (array) {
+  displayNames.push(array.animal_name);
+  displayNames.push(array.scientific_name);
 });
 
 console.log(displayNames);
@@ -307,14 +307,14 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 const filler = [];
 function popul(array) {
-    for (i = 0; i < array.length; i++) {
-        filler.push(array[i].population);
-    }
+  for (i = 0; i < array.length; i++) {
+    filler.push(array[i].population);
+  }
 }
 popul(zooAnimals);
 
-const lowPopulationAnimals = filler.filter(function(value) {
-    return value < 5;
+const lowPopulationAnimals = filler.filter(function (value) {
+  return value < 5;
 });
 
 console.log(filler);
@@ -326,18 +326,18 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 
-const filler = [];
-function popul(array) {
-    for (i = 0; i < array.length; i++) {
-        filler.push(array[i].population);
-    }
-}
-popul(zooAnimals);
+// const filler = [];
+// function popul(array) {
+//     for (i = 0; i < array.length; i++) {
+//         filler.push(array[i].population);
+//     }
+// }
+// popul(zooAnimals);
 console.log(filler);
 filler25 = filler;
 console.log(filler25);
 var populationTotal = filler25.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
+  return accumulator + currentValue;
 }, 0);
 console.log(populationTotal);
 
