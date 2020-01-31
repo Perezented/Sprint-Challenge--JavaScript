@@ -181,15 +181,33 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
-// function filterEm(array)for (i = 0; i < array.length; i++) {
-//   if
-//   }
-// function filterItems(array, query) {
-//   unisWithUni.push(array.filter)
+// const filler2 = [];
+function check4Uni(array) {
+    for (i = 0; i < array.length; i++) {
+        if (array[i].university.includes("Uni") == true) {
+            unisWithUni.push(array[i]);
+        }
+    }
+}
+// function pullUnis(array) {
+//     for (i = 0; i < array.length; i++) {
+//               filler2.push(array[i].university);
+//   //       if(array.includes('Uni')){
+//   // unisWithUni.push(array[i].university)
+//     }
 // }
 
-// filterItems(graduates, 'Uni')
+// // function filterEm(array)for (i = 0; i < array.length; i++) {
+// //   if
+// //   }
 
+// // filterItems(graduates, 'Uni')
+// // for (i = 0; i < graduates.length; i++) {
+// //   unisWithUni.push(graduates[i].university.includes('uni'))
+
+// //   }
+// console.log(filler2);
+check4Uni(graduates);
 console.log(unisWithUni);
 
 // ==== ADVANCED Array Methods ====
@@ -307,7 +325,20 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
+
+const filler = [];
+function popul(array) {
+    for (i = 0; i < array.length; i++) {
+        filler.push(array[i].population);
+    }
+}
+popul(zooAnimals);
+console.log(filler);
+filler25 = filler;
+console.log(filler25);
+var populationTotal = filler25.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0);
 console.log(populationTotal);
 
 /*
