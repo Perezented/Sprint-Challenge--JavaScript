@@ -5,15 +5,12 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
-class Dino {
-    constructor(attributes) {
-        (this.name = attributes.name),
-            (this.diet = attributes.diet),
-            (this.weight = attributes.weight),
-            (this.length = attributes.length),
-            (this.period = attributes.period),
-            (this.roar = attributes.roar);
-    }
+function Dino(attributes) {
+    (this.name = attributes.name),
+        (this.diet = attributes.diet),
+        (this.weight = attributes.weight),
+        (this.length = attributes.length),
+        (this.period = attributes.period);
 }
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 const tyrannosaurus = new Dino({
@@ -21,8 +18,7 @@ const tyrannosaurus = new Dino({
     diet: "carnivorous",
     weight: "7000kg",
     length: "12m",
-    period: "Late Cretaceous",
-    roar: "RAWERSRARARWERSARARARRRR!"
+    period: "Late Cretaceous"
 });
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = new Dino({
@@ -55,8 +51,10 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-
-console.log(tyrannosaurus.roar);
+Dino.prototype.roar = function() {
+    return "RAWERSRARARWERSARARARRRR!";
+};
+console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
