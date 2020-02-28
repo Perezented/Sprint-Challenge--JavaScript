@@ -17,6 +17,7 @@ function CuboidMaker(attributes) {
   Formula for cuboid volume: length * width * height
 */
 CuboidMaker.prototype.volume = function(length, width, height) {
+    //volume formula
     return this.length * this.width * this.height;
 };
 
@@ -27,6 +28,7 @@ CuboidMaker.prototype.volume = function(length, width, height) {
 */
 CuboidMaker.prototype.surfaceArea = function(length, width, height) {
     return (
+        //surface area formula
         2 *
         (this.length * this.width +
             this.length * this.height +
