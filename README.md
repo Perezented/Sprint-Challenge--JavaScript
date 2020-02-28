@@ -37,22 +37,13 @@ If a function is made within a function, then everything in that function is con
 
 Copied from Wednesday's project....
 
----
-
 a. Window/Global Object Binding - When in the global scope, the value of “this” will be the window/console Object;
-
----
 
 b. Implicit Binding - Whenever a preceding dot calls a function, the object left of the dot is this.
 
----
-
 c. New Binding - Whenever we use a constructor function, this refers to the specific instance of the object that is created and returned by the constructor function.
 
----
-
 d. Explicit Binding - Whenever we use JavaScript’s call or apply method, this is explicitly defined.
-\*/
 
 ---
 
@@ -60,7 +51,7 @@ d. Explicit Binding - Whenever we use JavaScript’s call or apply method, this 
 
 ---
 
-It's the call step, meaning its retreiving all attributes applied to the parent class.
+It's the call step of extend, meaning its retreiving all attributes applied to the parent class. Look at 4d.
 
 ---
 
